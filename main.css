@@ -1,0 +1,123 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+body > header {
+	background-color: black;
+	color: aliceblue;
+	display: flex;
+	padding: 16px;
+	width: 100%;
+}
+
+header li {
+	display: inline;
+	text-align: right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+	padding: 12px;
+}
+
+header li a {
+	color: aliceblue;
+	text-decoration: none;
+}
+
+header .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.container {
+	width: 1080px;
+}
+
+.articles {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.articles article {
+	width: 30%;
+}
+
+.articles article img {
+	width: 100%;
+	/*TODO: fix webp, fix img sizes	*/
+}
+
+section {
+	padding: 16px;
+}
+
+section h2,
+.articles article {
+	margin-bottom: 16px;
+}
+
+.articles article h3 {
+	font-size: 40px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.articles article a {
+	text-decoration: none;
+	display: inline-block;
+	color:aliceblue;
+	font-weight: bold;
+	margin-top: 8px;
+	padding: 8px;
+}
+
+.articles article p,
+.articles article a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+}
+
+.articles article a:hover {
+	text-decoration: underline;
+}
+
+section h2 {
+	font-size: 80px;
+}
+
+#sports {
+	background-color: aqua;
+}
+
+#sports .articles article a {
+	background-color: rgb(74, 82, 151);
+}
+
+#economy {
+	background-color:bisque;
+}
+
+#economy .articles article a {
+	background-color:chocolate;
+}
+
+
+#psychoanalysis {
+	background-color: palegoldenrod;
+}
+
+#psychoanalysis .articles article a {
+	background-color: crimson;
+}
+
+#games {
+	background-color: violet;
+}
+
+#games .articles article a {
+	background-color: darkslateblue;
+}
