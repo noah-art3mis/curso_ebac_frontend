@@ -7,13 +7,17 @@
   color: #F0EBCE
 }
 
-body {
+main {
+  margin: auto;
+  text-align: center;
+  padding: 10% 0;
+}
+
+form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  margin: auto;
-  padding: 25svw 0;
 }
 
 input {
@@ -30,4 +34,11 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+.error-message {
+  background-color: #AA5656;
+  padding: 1em;
+  font-size: 0.9rem;
+  display: none
 }
