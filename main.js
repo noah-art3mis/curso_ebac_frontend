@@ -22,4 +22,4 @@ form.addEventListener('keyup', (e) => {
 	else {
 		error_message.style.display = 'block';
 	}
-})
+}) 
