@@ -1,0 +1,15 @@
+:root {
+--color-a: ;
+--color-b: ;
+--color-c: ;
+--color-d: ;
+}
+
+* {
+  margin: 01;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baskervville', Georgia, 'Times New Roman', Times, serif;
+  background-color: var(--color-a);
+  color: var(--color-b);
+}
