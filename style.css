@@ -3,6 +3,17 @@
   --color-b: #00337C;
   --color-c: #1C82AD;
   --color-d: #03C988;
+  --BG: #282A36;
+  --FG: #F8F8F2;
+  --SELECTION: #44475A;
+  --COMMENT: #6272A4;
+  --CYAN: #8BE9FD;
+  --GREEN: #50FA7B;
+  --ORANGE: #FFB86C;
+  --PINK: #FF79C6;
+  --PURPLE: #BD93F9;
+  --RED: #FF5555;
+  --YELLOW: #F1FA8C;
 }
 
 * {
@@ -11,44 +22,63 @@
   box-sizing: border-box;
   font-family: 'Baskervville', serif;
   font-size: 105%;
-  background-color: var(--color-a);
-  color: var(--color-d);
+  background-color: var(--BG);
+  color: var(--CYAN);
+}
+
+body {
+  margin: auto;
+  width: 50%;
+}
+
+main {
+  margin: 1rem;
 }
 
 header {
-  margin: 1em;
   font-size: 2rem;
+  text-align: center;
+  margin: 1rem auto;
 }
 
 footer {
   position: absolute;
-  bottom: 1ch;
-  right: 1ch;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 1ch;
+  padding-right: 1ch;
   text-align: right;
-}
-
-main {
-  margin: auto;
-  width: 50%;
 }
 
 form {
   display: flex;
   flex-direction: column;
   max-width: 300px;
+  margin: auto;
+}
+
+.form-campo {
+  margin: 1rem auto;
 }
 
 form label {
   font-weight: bold;
   display: block;
+  padding-bottom: 0.2em;
 }
 
 input {
-  background-color: var(--color-c);
-  border-color: var(--color-d);
+  background-color: var(--SELECTION);
+  border-color: var(--COMMENT);
   padding: 0.5em;
 }
 
-.form-campo {
-  margin: 1rem 0;
+input:focus-visible {
+  outline: var(--YELLOW) solid 2px;
 }
+
+button {
+  background-color: var(--RED);
+  color: var(--CYAN);
+  border-color: var(--RED);
+
