@@ -1,8 +1,8 @@
 :root {
---color-a: ;
---color-b: ;
---color-c: ;
---color-d: ;
+  --color-a: #13005A;
+  --color-b: #00337C;
+  --color-c: #1C82AD;
+  --color-d: #03C988;
 }
 
 * {
@@ -10,7 +10,45 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Baskervville', serif;
+  font-size: 105%;
   background-color: var(--color-a);
-  color: var(--color-b);
+  color: var(--color-d);
 }
 
+header {
+  margin: 1em;
+  font-size: 2rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 1ch;
+  right: 1ch;
+  text-align: right;
+}
+
+main {
+  margin: auto;
+  width: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+}
+
+input {
+  background-color: var(--color-c);
+  border-color: var(--color-d);
+  padding: 0.5em;
+}
+
+.form-campo {
+  margin: 1rem 0;
+}
