@@ -1,8 +1,16 @@
 @use '_reset.scss';
-@use '_palette.scss';
+@use '_breakpoints.scss' as *;
+@use '_palette.scss' as *;
+
+@mixin cols($n: 1, $gap: 1%) {
+  grid-template-columns: repeat($n, 1fr);
+  //   eu queria fazer a função com só 1 argumento mas não entendi como fazer ele aceitar a unidade %
+  //   column-gap: (4 - $n) + %;
+  column-gap: $gap;
+}
 
 body {
-  background-color: palette.$color-1;
+  background-color: $color-1;
 }
 
 li {
@@ -10,13 +18,17 @@ li {
 }
 
 .container {
-  max-width: 1024px;
   width: 100%;
   margin: 0 auto;
+  max-width: 1024px;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    max-width: 80%;
+  }
 }
 
 header {
-  background-color: palette.$color-2;
+  background-color: $color-2;
   position: sticky;
   top: 0;
   left: 0;
@@ -35,7 +47,7 @@ header {
         margin-left: 24px;
 
         a {
-          color: palette.$color-3;
+          color: $color-3;
           text-decoration: none;
         }
       }
@@ -49,51 +61,44 @@ section {
   .products {
     margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(3, 32.66%);
-    column-gap: 1%;
     row-gap: 4%;
     width: 100%;
 
-    .product-item img {
-      width: 100%;
-      border-radius: 16px;
+    @include cols(3, $gap: 1%);
 
-	}
-	
-	.product-button {
-	  display: block;
-	  background-color: palette.$color-4;
-	  color: palette.$color-3;
-	  text-align: center;
-	  padding: 8px 0;
-	  border-radius: 8px;
-	  margin-top: 8px;
-	  text-decoration: none;
-
-	  &:hover {
-		background-color: lighten(palette.$color-4, 5%); // #4cd137
-	  }
+    @media screen and (max-width: $breakpoint-tablet) {
+      @include cols(2, $gap: 2%);
     }
-  }
-}
 
-@media screen and (max-width: 1023px) {
-  .container {
-    max-width: 80%;
-  }
+    @media screen and (max-width: $breakpoint-mobile) {
+      //   display: block;
+      @include cols(1, $gap: 3%);
+    }
 
-  .products {
-    grid-template-columns: repeat(2, 48.5%);
-    column-gap: 3%;
-  }
-}
+    .product-item {
+      @media screen and (max-width: $breakpoint-mobile) {
+        margin-bottom: 32px;
+      }
 
-@media screen and (max-width: 767px) {
-  .products {
-    display: block;
-  }
+      img {
+        width: 100%;
+        border-radius: 16px;
+      }
+    }
 
-  .product-item {
-    margin-bottom: 32px;
+    .product-button {
+      display: block;
+      background-color: $color-4;
+      color: $color-3;
+      text-align: center;
+      padding: 8px 0;
+      border-radius: 8px;
+      margin-top: 8px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: lighten($color-4, 5%); // #4cd137
+      }
+    }
   }
 }
