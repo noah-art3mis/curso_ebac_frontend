@@ -4,7 +4,7 @@
 
 @mixin cols($n: 1, $gap: 1%) {
   grid-template-columns: repeat($n, 1fr);
-  //   eu queria fazer a função com só 1 argumento mas não entendi como fazer ele aceitar a unidade %
+  //   eu queria fazer a função com só 1 argumento mas não entendi como fazer ele aceitar o %
   //   column-gap: (4 - $n) + %;
   column-gap: $gap;
 }
