@@ -2,6 +2,7 @@
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
+
 *,
 *::before,
 *::after {
@@ -43,7 +44,6 @@ h6 {
   overflow-wrap: break-word;
 }
 
-
 /* my reset 
 https://youtu.be/h3bTwCqX4ns
 */
@@ -84,6 +84,5 @@ h5,
 h6 {
   font-family: var(--ff-heading);
 }
-
 
 /* bespoke css */

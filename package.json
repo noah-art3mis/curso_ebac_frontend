@@ -1,0 +1,23 @@
+{
+  "name": "frontend",
+  "description": "",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {
+    "sass": "^1.59.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass src/main.scss build/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noah-art3mis/curso_ebac_frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noah-art3mis/curso_ebac_frontend/issues"
+  },
+  "homepage": "https://github.com/noah-art3mis/curso_ebac_frontend#readme"
+}
