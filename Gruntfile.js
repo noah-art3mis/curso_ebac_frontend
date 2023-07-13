@@ -83,7 +83,6 @@ module.exports = function (grunt) {
         },
       },
     },
-    clean: ['prebuild/'],
     uglify: {
       target: {
         files: {
@@ -105,7 +104,6 @@ module.exports = function (grunt) {
     'htmlmin:dist',
     'replace:dist',
     'less:production',
-    // 'clean',
     'uglify',
   ]);
 };
