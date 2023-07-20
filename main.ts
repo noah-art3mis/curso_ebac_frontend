@@ -1,8 +1,8 @@
-function multiplica(a: number, b: number) {
+function multiplica(a: number, b: number): number {
 return a * b
 }
 
-function saudação(nome: string) {
+function saudação(nome: string): string {
 return "Olá " + nome
 }
 
